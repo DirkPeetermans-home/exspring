@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import be.abis.exercise.model.Course;
 import be.abis.exercise.repository.CourseRepository;
 
-@Repository
+
 @Service
 public class AbisCourseService implements CourseService {
 
