@@ -35,8 +35,7 @@ public class AbisTrainingService implements TrainingService {
 
 	@Override
 	public ArrayList<Person> getAllPersons() {
-		// TODO Auto-generated method stub
-		return null;
+		return personRepository.getAllPersons();
 	}
 
 	@Override
@@ -46,8 +45,7 @@ public class AbisTrainingService implements TrainingService {
 
 	@Override
 	public Person findPerson(String emailAddress, String passWord) {
-		// TODO Auto-generated method stub
-		return null;
+		return personRepository.findPerson(emailAddress, passWord);
 	}
 
 	@Override
