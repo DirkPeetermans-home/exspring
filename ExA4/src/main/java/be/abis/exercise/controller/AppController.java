@@ -1,4 +1,4 @@
-package Controller;
+package be.abis.exercise.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
