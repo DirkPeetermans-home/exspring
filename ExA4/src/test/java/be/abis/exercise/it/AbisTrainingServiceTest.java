@@ -29,10 +29,15 @@ public class AbisTrainingServiceTest {
 		assertEquals("Mary",p1.getFirstName());
 	}
 
+	
 	@Test
 	public void findCourse() {
 		//Course c1 = courseService.findCourse(8000);
-		Course c1 = ((CourseService) trainingService).findCourse(8000);
-		assertEquals("Java Prog",c1.getShortTitle());
+		//Course c1 = ((CourseService) trainingService).findCourse(8000);
+		//assertEquals("Java Prog",c1.getShortTitle());
+		
+		Course c1 = trainingService.getCourseService().findCourse(7900);
+		assertEquals("Workshop SQL",c1.getShortTitle());
 	}
+	
 }

@@ -18,8 +18,7 @@ public class AbisTrainingService implements TrainingService {
 	
 	@Autowired
 	private CourseService courseService;	
-	@Autowired
-	
+	@Autowired	
 	private PersonRepository personRepository;
 	
 	@Override
