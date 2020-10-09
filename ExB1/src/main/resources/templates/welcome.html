@@ -7,7 +7,16 @@
 </head>
 <body>
 
-<h2>Welcome <span th:text="${validLoginPerson.firstName}"></span></h2> 
+<h2>Welcome <span th:text="${attrib1.firstName}"></span></h2> 
+
+
+<li><a href="http://localhost:8080/dummy">search for courses</a></li>
+
+
+
+<form action="#" th:action="@{/logout}" method="get">
+<input type="submit" value="Logout" />
+</form>
 
 </body>
 </html>

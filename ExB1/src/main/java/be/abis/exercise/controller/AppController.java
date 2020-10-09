@@ -33,12 +33,24 @@ public class AppController {
 		
 		validLoginPerson = trainingService.findPerson(login.getEmail(), login.getPsw()) ;
 		if (validLoginPerson != null) {	
-			model.addAttribute("welcome",validLoginPerson);
+			model.addAttribute("attrib1",validLoginPerson);
 			return "welcome";
 		} else { 
-			return "/" ;
+			return "redirect:/" ;
 		}
 	}
 	
+	@GetMapping("/logout")
+	public String logout(){
+				
+		return "redirect:/"; 
+				
+	}
 
+	@GetMapping("/dummy")
+	public String dummy(){
+				
+		return "redirect:/dummyPage"; 
+				
+	}
 }
