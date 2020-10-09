@@ -32,8 +32,12 @@ public class AppController {
 	public String welcome (Model model, Login login) {
 		
 		validLoginPerson = trainingService.findPerson(login.getEmail(), login.getPsw()) ;
-		if (validLoginPerson != null);
-		return "welcome";
+		if (validLoginPerson != null) {	
+			model.addAttribute("welcome",validLoginPerson);
+			return "welcome";
+		} else { 
+			return "/" ;
+		}
 	}
 	
 
