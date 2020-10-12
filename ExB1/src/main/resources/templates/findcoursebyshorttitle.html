@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Find Course by Short Title</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/findcoursebyshorttitle}" th:object="${attrib1}" method="post">
+  
+  <div class="container">
+    <label for="Short Title"><b>Short title</b></label>
+    <input type="text" placeholder="Enter Short Title" th:field="*{shortTitle}" required>
+
+    
+    <input type="submit" value="Input" />
+    
+  </div>
+
+  
+</form>
+
+
+</body>
+</html>
+</html>

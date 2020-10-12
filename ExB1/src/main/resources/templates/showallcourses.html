@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">>
+<head>
+<meta charset="ISO-8859-1">
+<title>Show all courses</title>
+</head>
+<body>
+
+<table border="1">
+
+<thead>
+<tr>
+<th>CourseId</th>
+<th>ShortTitle</th>
+<th>LongTitle</th>
+</tr>
+</thead>
+
+<tbody>
+<tr th:each="c : ${attrib1}">
+<td th:text="${c.courseId}"></td>
+<td th:text="${c.shortTitle}"></td>
+<td th:text="${c.longTitle}"></td>
+</tr>
+</tbody>
+</table>
+
+<form action="#" th:action="@{/back}" method="get">
+<input type="submit" value="Back" />
+
+</body>
+</html>

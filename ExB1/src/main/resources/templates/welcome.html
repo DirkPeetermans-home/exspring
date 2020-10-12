@@ -9,9 +9,12 @@
 
 <h2>Welcome <span th:text="${attrib1.firstName}"></span></h2> 
 
-
-<li><a href="http://localhost:8080/dummy">search for courses</a></li>
-
+<div>
+<ul>
+<li><a href="http://localhost:8080/exercise/searchforcourses">search for courses</a></li>
+<li><a href="http://localhost:8080/exercise/personadministration">person administration</a></li>
+</ul>
+</div>
 
 
 <form action="#" th:action="@{/logout}" method="get">
