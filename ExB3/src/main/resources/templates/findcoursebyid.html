@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Find Course by ID</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/findcoursebyid}" th:object="${attrib1}" method="post">
+  
+  <div class="container">
+    <label for="Course ID"><b>CourseID</b></label>
+    <input type="text" placeholder="Enter CourseID" th:field="*{courseId}" required>
+
+    
+    <input type="submit" value="Input" />
+    
+  </div>
+
+  
+</form>
+
+
+</body>
+</html>

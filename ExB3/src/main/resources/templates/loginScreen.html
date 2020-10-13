@@ -1,0 +1,30 @@
+ 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Screen</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/}" th:object="${loginScreen}" method="post">
+  
+  <div class="container">
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" th:field="*{email}" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" th:field="*{psw}" required>
+
+    <input type="submit" value="Input" />
+    
+  </div>
+
+  
+</form>
+
+
+</body>
+</html>

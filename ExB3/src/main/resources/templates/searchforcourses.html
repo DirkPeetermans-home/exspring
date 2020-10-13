@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Search for courses</title>
+</head>
+<body>
+Search for courses
+
+<div>
+<ul>
+<li><a href="http://localhost:8080/exercise/findcoursebyall">Show all courses</a></li>
+<li><a href="http://localhost:8080/exercise/findcoursebyid">Find a Course by ID</a></li>
+<li><a href="http://localhost:8080/exercise/findcoursebyshorttitle">Find a Course by short title</a></li>
+</ul>
+</div>
+
+<form action="#" th:action="@{/back}" method="get">
+<input type="submit" value="Back" />
+
+</body>
+</html>
