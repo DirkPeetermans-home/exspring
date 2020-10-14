@@ -40,7 +40,7 @@ public class AppController {
 	}
 	
 	@PostMapping("/")
-	public String welcome (Model model, @Valid Login login, BindingResult bindingresult) {
+	public String welcome (Model model, @Valid @ModelAttribute("loginScreen") Login login, BindingResult bindingresult) {
 		
 		if (bindingresult.hasErrors()) {
 			return "loginScreen";
@@ -51,7 +51,7 @@ public class AppController {
 			model.addAttribute("attrib1",validLoginPerson);
 			return "welcome";
 		} else { 
-			//bindingresult.rejectValue("psw","","Login failed");
+			bindingresult.reject("global","Login failed");
 			return "loginScreen" ;
 		}
 	}
