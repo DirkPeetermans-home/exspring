@@ -40,14 +40,19 @@ public class AppController {
 	}
 	
 	@PostMapping("/")
-	public String welcome (Model model, Login login) {
+	public String welcome (Model model, @Valid Login login, BindingResult bindingresult) {
+		
+		if (bindingresult.hasErrors()) {
+			return "loginScreen";
+		}
 		
 		validLoginPerson = trainingService.findPerson(login.getEmail(), login.getPsw()) ;
 		if (validLoginPerson != null) {	
 			model.addAttribute("attrib1",validLoginPerson);
 			return "welcome";
 		} else { 
-			return "redirect:/" ;
+			//bindingresult.rejectValue("psw","","Login failed");
+			return "loginScreen" ;
 		}
 	}
 	

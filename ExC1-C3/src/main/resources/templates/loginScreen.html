@@ -11,17 +11,24 @@
 
 <form action="#" th:action="@{/}" th:object="${loginScreen}" method="post">
   
-  <div class="container">
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" th:field="*{email}" required>
+  <table>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" th:field="*{email}"/></td>
+				<td><span  th:errors="*{email}"> </span>  </td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" th:field="*{psw}"/></td>
+				<td><span  th:errors="*{psw}"> </span>  </td>
+			</tr>
+			<tr>
+				<td></td>
+				<td style="text-align:right"><input type="submit" value="Login"/></td>
+			</tr>
+		</table>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" th:field="*{psw}" required>
-
-    <input type="submit" value="Input" />
-    
-  </div>
-
+	  
   
 </form>
 
