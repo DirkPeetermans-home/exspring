@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Search for person</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/searchforperson}" th:object="${attrib1}" method="post">
+  
+  <div class="container">
+    <label for="PersonID "><b>PersonID</b></label>
+    <input type="text" placeholder="Enter PersonID" th:field="*{personId}" required>
+
+    
+    <input type="submit" value="Input" />
+    
+  </div>
+
+  
+</form>
+
+
+</body>
+</html>

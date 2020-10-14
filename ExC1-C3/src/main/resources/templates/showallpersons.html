@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">>
+<head>
+<meta charset="ISO-8859-1">
+<title>Show all persons</title>
+</head>
+<body>
+
+<table border="1">
+
+<thead>
+<tr>
+<th>personId</th>
+<th>firstName</th>
+<th>LastName</th>
+</tr>
+</thead>
+
+<tbody>
+<tr th:each="p : ${attrib1}">
+<td th:text="${p.personId}"></td>
+<td th:text="${p.firstName}"></td>
+<td th:text="${p.lastName}"></td>
+</tr>
+</tbody>
+</table>
+
+<form action="#" th:action="@{/personadministration}" method="get">
+<input type="submit" value="Back" />
+
+</body>
+</html>
